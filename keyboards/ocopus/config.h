@@ -23,13 +23,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x0000
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    %YOUR_NAME%
-#define PRODUCT         ocopus
+#define MANUFACTURER    Sundara Tejaswi Digumarti
+#define PRODUCT         ocopus keyboard
 #define DESCRIPTION     A custom keyboard
 
 /* key matrix size */
-#define MATRIX_ROWS 2
-#define MATRIX_COLS 3
+#define MATRIX_ROWS 9
+#define MATRIX_COLS 9
 
 /*
  * Keyboard Matrix Assignments
