@@ -1,6 +1,7 @@
 # ocopus
 
-![ocopus](imgur.com image replace me!)
+![ocopus](twohand.png)
+![ocopus_onehanf](onehand.png)
 
 A keyboard that is inspired by the [Ergodox](https://www.ergodox.io/) and [Redox]((https://github.com/mattdibi/redox-keyboard)) layouts and whose shape was inspired by the [Dactyl](https://github.com/adereth/dactyl-keyboard) keyboard.
 
