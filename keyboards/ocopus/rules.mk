@@ -46,7 +46,7 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 #   LUFA DFU     lufa-dfu
 #   QMK DFU      qmk-dfu
 #   atmega32a    bootloadHID
-BOOTLOADER = atmel-dfu
+BOOTLOADER = caterina
 
 
 # If you don't know the bootloader type, then you can specify the
@@ -79,3 +79,5 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 HD44780_ENABLE = no 		# Enable support for HD44780 based LCDs (+400)
+
+SPLIT_KEYBOARD = yes
