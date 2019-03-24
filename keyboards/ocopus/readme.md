@@ -3,9 +3,9 @@
 ![ocopus](twohand.png)
 ![ocopus_onehanf](onehand.png)
 
-A keyboard that is inspired by the [Ergodox](https://www.ergodox.io/) and [Redox]((https://github.com/mattdibi/redox-keyboard)) layouts and whose shape was inspired by the [Dactyl](https://github.com/adereth/dactyl-keyboard) keyboard.
+A keyboard that is inspired by the [Ergodox](https://www.ergodox.io/) and [Redox]((https://github.com/mattdibi/redox-keyboard) layouts and whose shape was inspired by the [Dactyl](https://github.com/adereth/dactyl-keyboard) keyboard.
 
-Keyboard Maintainer: [%Sundara Tejaswi Digumarti%](https://github.com/tejaswid)  
+Keyboard Maintainer: [Sundara Tejaswi Digumarti](https://github.com/tejaswid)  
 Hardware Supported: Hand wired, works with Arduino Pro Micro.  
 Hardware Availability: write to me if you are interested. I only developed it as a hobby project.  
 
