@@ -1,4 +1,4 @@
-/* Copyright 2019 %Sundara Tejaswi Digumarti%
+/* Copyright 2019 Sundara Tejaswi Digumarti
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,38 +15,66 @@
  */
 #include QMK_KEYBOARD_H
 
+// We are defining a name for each layer for readability. 
+// This name is used in the keymap matrix
+#define _QWERTY 0
+#define _SYMBOLS 1
+#define _NAVI 2
+#define _EXTRA 3
+
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-  QMKBEST = SAFE_RANGE,
-  QMKURL
+  QWERTY = SAFE_RANGE,
+  SYMBOLS,
+  NAVI,
+  EXTRA,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT( /* Base */
-    KC_A,  KC_1,  KC_H, \
-      KC_TAB,  KC_SPC   \
+  [_QWERTY] = LAYOUT( /* Base Layer*/
+  //				  ┌────────┬────────┬────────┬────────┬────────┐                                          ┌────────┬────────┬────────┬────────┬────────┐
+     				   KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5                                       		   KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,
+  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         				  ├────────┼────────┼────────┼────────┼────────┼────────┬────────┐
+     		  KC_TAB  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T                              				   KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P    ,KC_EQL  ,
+  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         				  ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
+     		  KC_ESC  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G                              				   KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_SCLN ,KC_QUOT ,KC_ENT
+  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤       									  ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
+     		  KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,       			 						   KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_DOT  ,
+  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤       									  ├────────┼────────┼────────┴────────┼────────┼────────┼────────┤
+     KC_LGUI ,KC_PPLS ,KC_PMNS ,KC_ALAS ,KC_CTPL ,    	   KC_BSPC ,        								           ,		 KC_RALT ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_DOT  ,
+  //├────────┼────────┼────────┼────────┼────────┘		  └────────┼────────┬────────┐      ┌────────┬────────┼────────┘		└────────┼────────┼────────┼────────┼────────┤
+     KC_LGUI ,KC_PPLS ,KC_PMNS ,KC_ALAS ,    	  		  		   KC_BSPC  ,KC_BSPC   		 KC_ENT  ,KC_SPC  ,   			    		  KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,
+  //└────────┴────────┴────────┴────────┘   	  		  		   └────────┴────────┘      └────────┴────────┘   			    		 └────────┴────────┴────────┴────────┘
+     									    	  		  		   KC_BSPC  ,KC_BSPC   		 KC_ENT  ,KC_SPC  
+  //										   	  		  		   └────────┴────────┘      └────────┴────────┘   			    
   ),
+
+  [_SYMBOLS] = LAYOUT(),
+
+  [_NAVI] = LAYOUT(),
+
+  [_EXTRA] = LAYOUT(),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case QMKBEST:
-      if (record->event.pressed) {
-        // when keycode QMKBEST is pressed
-        SEND_STRING("QMK is the best thing ever!");
-      } else {
-        // when keycode QMKBEST is released
-      }
-      break;
-    case QMKURL:
-      if (record->event.pressed) {
-        // when keycode QMKURL is pressed
-        SEND_STRING("https://qmk.fm/" SS_TAP(X_ENTER));
-      } else {
-        // when keycode QMKURL is released
-      }
-      break;
-  }
+  // switch (keycode) {
+  //   case QMKBEST:
+  //     if (record->event.pressed) {
+  //       // when keycode QMKBEST is pressed
+  //       SEND_STRING("QMK is the best thing ever!");
+  //     } else {
+  //       // when keycode QMKBEST is released
+  //     }
+  //     break;
+  //   case QMKURL:
+  //     if (record->event.pressed) {
+  //       // when keycode QMKURL is pressed
+  //       SEND_STRING("https://qmk.fm/" SS_TAP(X_ENTER));
+  //     } else {
+  //       // when keycode QMKURL is released
+  //     }
+  //     break;
+  // }
   return true;
 }
 
